@@ -1,0 +1,114 @@
+.accordion {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #323232;
+    padding: 1em;
+    padding-top: 1.3em;
+    cursor: pointer;
+    z-index: 2;
+
+    p {
+        color: #7C7C7C;
+        font-weight: 500;
+        font-size: 15px;
+       
+        
+    }
+
+    .arrow {
+        svg {
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+
+    .arrow#opened {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.accordion > * + * {
+    margin-left: 0.6em;
+}
+
+.editor {
+    position: relative;
+    width: 100%;
+    background-color: #373737;
+    padding: 1em;
+    z-index: 1;
+}
+
+.tabs {
+    display: flex;
+    padding: 0.7em 0.5em;
+    border-bottom: 1px solid #7C7C7C;
+    background-color: #373737;
+}
+
+.tab {
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    
+
+    p {
+        padding: 0.2em 0.7em;
+        position: relative;
+        z-index: 2;
+    }
+
+    .onHover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #282828;
+        top: 0;
+        border-radius: 3px;
+        left: 0;
+        
+    }
+}
+
+.copy {
+    position: absolute;
+    right: 0em;
+    cursor: pointer;
+    padding: 0.2em;
+    border-radius: 3px;
+    transition: background 0.2s ease-in-out;
+
+    svg {
+        display: grid;
+        place-content: center;
+    }
+
+    &:hover {
+        background-color: #4A4A4A;
+    }
+}
+
+#inactive {
+    color: #7C7C7C;
+    &:hover {
+        color: white;
+    }
+}
+
+
+.copyNotification {
+    position: absolute;
+    right: 0;
+    display: grid;
+
+    margin-right: 2.5em;
+    padding: 0.3em 1em;
+    padding-top: 0.4em;
+    background-color: #323232;
+    border-radius: 3px;
+    font-size: 15px;
+}

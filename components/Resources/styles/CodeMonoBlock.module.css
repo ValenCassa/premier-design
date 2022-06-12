@@ -1,0 +1,11 @@
+#monoblock {
+    background-color: #323232;
+    border-radius: 3px;
+    color: #e2e2e2;
+    padding: 1em;
+    margin: 1em 0;
+
+    span {
+        color: #b4b4b4;
+    }
+  }

@@ -1,0 +1,59 @@
+.scrollbarContainer {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding-right: 3em;
+        display: flex;
+        align-items: center;
+    }
+
+    .percent {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0em;
+        height: 140px;
+    }
+
+    .counter {
+        position: absolute;
+        font-size: 16px;
+        color: white;
+        transform: translateX(-3em);
+    }
+    
+}
+
+
+.counter {
+    width: 3px;
+    height: 100%;
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #464646;
+    transition: background 0.15s ease;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 140px;
+        background: white;
+        transform: rotate(180deg);
+        z-index: -1;
+    }
+}
