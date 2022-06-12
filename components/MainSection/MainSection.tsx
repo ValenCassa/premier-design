@@ -1,27 +1,11 @@
 import styles from './styles/MainSection.module.css';
 import TabsContextProvider from 'contexts/TabsContext';
 import type { Item } from 'types/Item';
+import { ideasItems as items } from 'config/ideas';
 import { useItem } from 'hooks/useItem';
 import { useRouter } from 'next/router';
 import Design from 'public/svg/Design.svg'
 
-const items: Item[] = [
-    {
-        title: 'Navbar Animation',
-        date: 'June 10, 2022',
-        href: 'navbar-animation'
-    },
-    {
-        title: 'Toasts',
-        date: 'June 10, 2022',
-        href: 'toasts'
-    },
-    {
-        title: 'Coloured Box Shadow',
-        date: 'June 10, 2022',
-        href: 'colored-box-shadow'
-    }
-]
 
 const Item = ({ item, index }: { item: Item, index: number }) => {
     const { activeItem, setActiveItem } = useItem()
