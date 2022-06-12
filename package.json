@@ -9,16 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.7",
     "framer-motion": "^6.3.11",
     "next": "12.1.6",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.7.1",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
     "@types/node": "17.0.41",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
+    "@types/react-syntax-highlighter": "^15.5.2",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "typescript": "4.7.3"
