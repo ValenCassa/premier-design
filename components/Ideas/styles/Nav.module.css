@@ -65,3 +65,14 @@
     border-radius: 2px 2px 0px 0px;
     
 }
+
+@media only screen and (max-width: 520px) {
+    .tab:not(:first-child)  {
+        display: none;
+    }
+
+    .tab:nth-child(2) {
+        display: unset !important;
+    }
+
+}

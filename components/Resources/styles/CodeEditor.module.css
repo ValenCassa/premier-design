@@ -47,6 +47,13 @@
     padding: 0.7em 0.5em;
     border-bottom: 1px solid #7C7C7C;
     background-color: #373737;
+    overflow: auto;
+}
+
+.tabs::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    height: 0;
 }
 
 .tab {

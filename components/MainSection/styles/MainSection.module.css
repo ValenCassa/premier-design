@@ -101,3 +101,13 @@
 .left > * + * {
     margin-left: 1em;
 }
+
+@media only screen and (max-width: 370px) {
+    .content {
+        padding: 0.7em !important;
+    }
+
+    .index {
+        width: 15px !important;
+    }
+}

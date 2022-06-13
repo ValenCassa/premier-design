@@ -144,6 +144,7 @@ const EditorAccordion =  ({ tsxContent, cssContent }: EditorAccordionProps) => {
                             animate={{ opacity: 1, height: 'auto', y: 0 }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
+                            className={styles.accordionContainer}
                         >
                             <div className={styles.tabs}>
                                 <Tab 
