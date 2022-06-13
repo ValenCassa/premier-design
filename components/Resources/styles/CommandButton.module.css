@@ -23,12 +23,12 @@
 }
 
 .container {
+    top: 0;
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 100%;
+    height: 100vw;
     background: rgba(0, 0, 0, 0.4);
-    inset: 0;
     display: flex;
     justify-content: center;
 
