@@ -3,12 +3,26 @@ import type { AppProps } from 'next/app'
 import Layout from '../components/Layout/Layout'
 import { AnimatePresence } from 'framer-motion'
 import Scrollbar from '../components/Scrollbar/Scrollbar'
-import { useRouter } from 'next/router'
+import Router, { useRouter } from 'next/router'
 import CommandButton, { CommandModalComponent } from 'components/Resources/CommandButton'
 import CommandContextProvider from 'contexts/CommandContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter()
+
+  const routeChange = () => {
+
+    const tempFix = () => {
+      const allStyleElems = document.querySelectorAll('style[media="x"]');
+      allStyleElems.forEach((elem) => {
+        elem.removeAttribute("media");
+      });
+    };
+    tempFix();
+  };
+
+  Router.events.on("routeChangeComplete", routeChange );
+  Router.events.on("routeChangeStart", routeChange );
 
 
   return (
