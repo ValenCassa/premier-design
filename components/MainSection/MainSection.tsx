@@ -1,27 +1,11 @@
 import styles from './styles/MainSection.module.css';
 import TabsContextProvider from 'contexts/TabsContext';
 import type { Item } from 'types/Item';
+import { ideasItems as items } from 'config/ideas';
 import { useItem } from 'hooks/useItem';
 import { useRouter } from 'next/router';
 import Design from 'public/svg/Design.svg'
 
-const items: Item[] = [
-    {
-        title: 'Navbar Animation',
-        date: 'June 10, 2022',
-        href: 'navbar-animation'
-    },
-    {
-        title: 'Toasts',
-        date: 'June 10, 2022',
-        href: 'toasts'
-    },
-    {
-        title: 'Coloured Box Shadow',
-        date: 'June 10, 2022',
-        href: 'colored-box-shadow'
-    }
-]
 
 const Item = ({ item, index }: { item: Item, index: number }) => {
     const { activeItem, setActiveItem } = useItem()
@@ -42,7 +26,9 @@ const Item = ({ item, index }: { item: Item, index: number }) => {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             className={styles.row}
-            onClick={() => push(`/ideas/${item.href}`)}
+            onClick={() => item.soon ? {} : push(`/ideas/${item.href}`)}
+            id={item.soon ? styles.soon : undefined}
+
             >
             <td className={styles.content}>
                 <div className={styles.left}>
@@ -52,13 +38,16 @@ const Item = ({ item, index }: { item: Item, index: number }) => {
                     <p
                         id={itemActiveClass}
                         className={styles.title}
+                        style={{
+                            color: item.soon ? '#878787': undefined,
+                        }}
                     >
                         {item.title}
                     </p>
                 </div>
                 <div className={styles.right}>
                     <p className={styles.date}>
-                        {item.date}
+                        {item.soon ? 'COMING SOON' : item.date}
                     </p>
                 </div>
             </td>
@@ -67,11 +56,13 @@ const Item = ({ item, index }: { item: Item, index: number }) => {
 }
 
 const Items = () => {
+
+    const sortedItems = items.filter(item => !item.soon).sort((a, b) => new Date(b.date as string).valueOf() - new Date(a.date as string).valueOf()).concat(items.filter(item => item.soon))
     
     return (
         <table className={styles.items}>
             <tbody>
-                {items.map((item, index) => (
+                {sortedItems.map((item, index) => (
                     <Item item={item} index={index} key={index} />
                 ))}
             </tbody>

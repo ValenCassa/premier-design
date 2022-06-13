@@ -1,4 +1,6 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import styles from './styles/CodeMonoBlock.module.css';
+import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 
 const CodeMonoBlock = ({ content }: { content: string }) => {
@@ -9,6 +11,21 @@ const CodeMonoBlock = ({ content }: { content: string }) => {
     return (
         <div className={`${styles.container}`} id={styles.monoblock}>
             <p>{code}<span>{comment}</span></p>
+        </div>
+    )
+}
+
+export const CodeBlock = ({ code, language }: { code: string, language: string }) => {
+    return (
+        <div className={`${styles.container} code`} id={styles.monoblock}>
+            <SyntaxHighlighter 
+                language={language} style={nord}
+                customStyle={{
+                    margin: '0',
+                }}
+                >
+                {code}
+            </SyntaxHighlighter>
         </div>
     )
 }

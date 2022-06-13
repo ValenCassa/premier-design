@@ -1,6 +1,6 @@
 import ArticleContainer from "components/Layout/ArticleContainer";
 import CodeEditor from "components/Resources/CodeEditor";
-import CodeMonoBlock from "components/Resources/CodeMonoBlock";
+import CodeMonoBlock, { CodeBlock } from "components/Resources/CodeMonoBlock";
 import ComponentContainer from "components/Resources/ComponentContainer";
 import Nav from "components/Resources/Nav";
 import Title from "components/Resources/Title";
@@ -75,6 +75,7 @@ const NavbarAnimation: NextPage = () => {
             <div className="content-container">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti facere hic, natus recusandae non eius a mollitia laudantium quis ad cupiditate velit eligendi, quasi aliquam magni quisquam? Molestiae illum placeat dolore, quos, adipisci modi dolores repellendus tempore blanditiis animi alias.</p>
                     <CodeMonoBlock content="npm install framer-motion --save-dev" />
+                    <CodeBlock code={exampleCSSCode} language='css' />
             </div>
         </ArticleContainer>
     )
