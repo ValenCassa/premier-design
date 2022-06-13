@@ -12,6 +12,7 @@ import GithubIcon from 'public/svg/Github.svg'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { useOutsideRef } from 'hooks/useOutsideRef'
+import PortfolioIcon from 'public/svg/Portfolio.svg'
 
 const linksVariants = {
     hidden: {
@@ -52,6 +53,11 @@ const linksSocial = [
         title: 'Github',
         href: 'https://github.com/ValenCassa'
     },
+    {
+        icon: <PortfolioIcon />,
+        title: 'Portfolio',
+        href: 'https://valencassa.dev'
+    }
 ]
 
 const ModalLink = ({ icon, title, active, href, onMouseEnter }: ModalLinkProps) => {
