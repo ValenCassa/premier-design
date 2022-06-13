@@ -7,7 +7,12 @@ import * as content from "config/content/custom-scrollbar"
 
 const CustomScrollbar: NextPage = () => {
     return (
-        <ArticleContainer>
+        <ArticleContainer
+            meta={{
+                title: "Custom Scrollbar",
+                description: "How to customize the scrollbar"
+            }}
+        >
             <Title title="Custom Scrollbar" />
             <div className="shadow-container">
                 <ComponentContainer>

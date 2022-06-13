@@ -8,7 +8,12 @@ import * as content from "config/content/colored-box-shadow";
 
 const ColoredBoxShadowPage: NextPage = () => {
     return (
-        <ArticleContainer>
+        <ArticleContainer
+            meta={{
+                title: "Colored Box Shadow",
+                description: "A box shadow with a color gradient"
+            }}
+        >
             <Title title="Coloured Box Shadow" />
             <div className="shadow-container">
                 <ComponentContainer>

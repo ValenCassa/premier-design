@@ -9,7 +9,12 @@ import * as content from 'config/content/nav'
 
 const NavbarAnimation: NextPage = () => {
     return (
-        <ArticleContainer>
+        <ArticleContainer
+            meta={{
+                title: "Navbar Animation",
+                description: "Animate the navbar"
+            }}
+        >
             <Title title="Navbar Animation"/>
             <div className="shadow-container">
                 <ComponentContainer

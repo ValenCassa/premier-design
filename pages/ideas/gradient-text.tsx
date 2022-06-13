@@ -8,7 +8,12 @@ import * as content from "config/content/text-gradient";
 
 const GradientTextPage: NextPage = () => {
     return (
-        <ArticleContainer>
+        <ArticleContainer
+            meta={{
+                title: "Gradient Text",
+                description: "A text with a gradient"
+            }}
+        >
             <Title title="Gradient Text" />
             <div className="shadow-container">
                 <ComponentContainer>

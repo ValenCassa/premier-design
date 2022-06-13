@@ -1,9 +1,20 @@
 import { ReactNode } from "react";
 import styles from './styles/ArticleContainer.module.css'
 import { motion } from "framer-motion";
+import Meta from "components/Resources/Meta";
 
-const ArticleContainer = ({ children }: { children: ReactNode }) => {
+interface Meta {
+    title: string;
+    description: string;
+}
+
+const ArticleContainer = ({ children, meta }: { children: ReactNode, meta: Meta }) => {
     return (
+        <>
+        <Meta 
+            title={meta.title}
+            description={meta.description}
+        />
         <motion.article 
             className={styles.container}
             initial={{ opacity: 0 }}
@@ -14,6 +25,7 @@ const ArticleContainer = ({ children }: { children: ReactNode }) => {
             >
             {children}
         </motion.article>
+        </>
     )
 }
 
