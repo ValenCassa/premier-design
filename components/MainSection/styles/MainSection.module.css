@@ -59,6 +59,7 @@
         border-top: 1px solid #454545;
         border-bottom: 1px solid #454545;
         cursor: pointer;
+        user-select: none;
 
         .content {
             display: flex;
@@ -89,6 +90,10 @@
 
 #inactive {
     color: #878787;
+}
+
+#soon:hover {
+    cursor: unset !important;
 }
 
 .left > * + * {

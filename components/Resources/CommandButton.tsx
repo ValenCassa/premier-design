@@ -59,7 +59,7 @@ const ModalLink = ({ icon, title, active, href, onMouseEnter }: ModalLinkProps) 
     const { setIsOpen } = useCommand()
 
     const onLink = () => {
-        
+        setIsOpen(false)
         if (href.includes('http')) {
             window.open(href, '_blank')
         } else {
@@ -68,16 +68,13 @@ const ModalLink = ({ icon, title, active, href, onMouseEnter }: ModalLinkProps) 
     }
 
     const handleClick = () => {
-        setIsOpen(false)
         onLink()
     }
 
     useHotkeys('*', (event, handler) => {
         if (active) {
             if (event.key === 'Enter') {
-                
                 onLink()
-                
             }
         }
     }, undefined, [active])
@@ -195,7 +192,7 @@ export const CommandModal = () => {
         if (event.key === 'ArrowDown') increment()
         if (event.key === 'ArrowUp') decrement()
 
-    }, undefined, [command, value])
+    }, { enableOnTags: ['INPUT'] }, [command, value])
 
     useHotkeys('ctrl+i', () => {
         searchRef.current?.focus()
@@ -241,9 +238,13 @@ export const CommandModal = () => {
 
                 >
                 <div className={styles.searchbar}>
-                    <label>
+                    <label className={styles.search}>
                         <Search />
                         <p style={{ opacity: value ? '0' : '1' }}>Search...</p>
+                    </label>
+                    <label className={styles.commandText}>
+                        <Command />
+                        <p>i</p>
                     </label>
                     <input 
                         value={value} 

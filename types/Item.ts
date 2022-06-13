@@ -1,5 +1,6 @@
 export interface Item {
-    date: string;
+    date?: string;
     title: string;
     href: string;
+    soon?: boolean;
 }

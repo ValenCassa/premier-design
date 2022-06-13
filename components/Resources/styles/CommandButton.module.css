@@ -59,7 +59,7 @@
                 }
             }
 
-            label {
+            .search {
                 position: absolute;
                 height: 100%;
                 display: flex;
@@ -71,6 +71,28 @@
 
                 p {
                     transition: opacity 0.1s ease-in-out;
+                }
+            }
+
+            .commandText {
+                position: absolute;
+                right: 0;
+                display: flex;
+                align-items: center;
+                user-select: none;
+                pointer-events: none;
+                height: 100%;
+                margin-right: 1em;
+                color: #707070;
+
+                p {
+                    font-size: 16px;
+                }
+
+                svg {
+                    color: #707070;
+                    transform: scale(0.6);
+                    margin-right: -0.3em;
                 }
             }
 
