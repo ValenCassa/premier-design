@@ -103,4 +103,16 @@ a {
         color: #A8A8A8;
       }
   }
+  pre:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(92, 92, 92);
+  }
+  pre::-webkit-scrollbar {
+      height: 3px ;
+      background: transparent;        
+  }
+  pre::-webkit-scrollbar-thumb {
+      transition: background-color 0.2s ease-in-out;
+      border-radius: 10px;
+
+  }
 }

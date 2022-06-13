@@ -70,6 +70,7 @@ const CodeBlock = ({ language, content }: { language: string, content: string })
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        className={styles.codeBlock}
         >
             <AnimatePresence initial exitBeforeEnter>
                 {copy

@@ -3,22 +3,52 @@ import { Item } from "types/Item";
 export const ideasItems: Item[] = [
     {
         title: 'Navbar Animation',
-        date: 'June 11, 2022',
+        date: 'June 13, 2022',
         href: 'navbar-animation'
     },
     {
-        title: 'Toasts',
-        date: 'June 12, 2022',
-        href: 'toasts'
+        title: 'Gradient Text',
+        date: 'June 13, 2022',
+        href: 'gradient-text'
     },
     {
         title: 'Coloured Box Shadow',
-        date: 'June 10, 2022',
+        date: 'June 13, 2022',
         href: 'colored-box-shadow'
     },
     {
-        title: 'Test',
-        href: 'test',
+        title: 'Custom Scrollbar',
+        date: 'June 13, 2022',
+        href: 'custom-scrollbar'
+    },
+    {
+        title: 'Toasts',
+        href: 'toasts',
         soon: true
-    }
+    },
+    {
+        title: 'Switch',
+        href: 'switch',
+        soon: true
+    },
+    {
+        title: 'Spinners',
+        href: 'spinners',
+        soon: true
+    },
+    {
+        title: 'Hamburger Menu',
+        href: 'hamburger-menu',
+        soon: true
+    },
+    {
+        title: 'Accordion',
+        href: 'accordion',
+        soon: true
+    },
+    {
+        title: 'Commands',
+        href: 'commands',
+        soon: true
+    },
 ]

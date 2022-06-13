@@ -71,6 +71,8 @@
                 
                 .index {
                     color: #878787;
+                    width: 20px;
+                    text-align: right;
                 }
 
                 .title {
