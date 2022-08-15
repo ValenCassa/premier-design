@@ -1,3 +1,5 @@
+import { Content } from "components/Resources/CodeEditor";
+
 export const tsxCode = `import styles from './styles/Nav.module.css';
 import { motion } from 'framer-motion';
 import { Dispatch, SetStateAction, useState } from 'react';
@@ -63,7 +65,7 @@ const Nav = () => {
     )
 }
 
-export default Nav`
+export default Nav`;
 
 export const cssCode = `.container {
     position: relative;
@@ -131,7 +133,7 @@ export const cssCode = `.container {
     bottom: -0.8em;
     border-radius: 2px 2px 0px 0px;
     
-}`
+}`;
 
 export const activeTab = `import { useRouter } from 'next/router';
 
@@ -182,5 +184,17 @@ return (
         </div>
     </nav>
     )
-}`
+}`;
 
+export const content: Content[] = [
+  {
+    code: tsxCode,
+    language: "tsx",
+    tabName: "Nav.tsx",
+  },
+  {
+    code: cssCode,
+    language: "css",
+    tabName: "Nav.module.css",
+  },
+];

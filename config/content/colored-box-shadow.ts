@@ -1,4 +1,6 @@
-export const tsxContent = `import styles from './styles/ColoredBoxShadow.module.css';
+import { Content } from "components/Resources/CodeEditor";
+
+const tsxContent = `import styles from './styles/ColoredBoxShadow.module.css';
 
 const ColoredBoxShadow = () => {
     return (
@@ -8,9 +10,9 @@ const ColoredBoxShadow = () => {
     )
 }
 
-export default ColoredBoxShadow`
+export default ColoredBoxShadow`;
 
-export const cssContent = `.container {
+const cssContent = `.container {
     position: relative;
     padding: 3em 7em;
     background-color: rgb(247, 247, 247);
@@ -32,5 +34,17 @@ export const cssContent = `.container {
         border-radius: 3px;
         transform: translateZ(-1px)
     }
-}`
+}`;
 
+export const content: Content[] = [
+  {
+    code: tsxContent,
+    language: "tsx",
+    tabName: "ColoredBoxShadow.tsx",
+  },
+  {
+    code: cssContent,
+    language: "css",
+    tabName: "ColoredBoxShadow.module.css",
+  },
+];
