@@ -1,3 +1,5 @@
+import { Content } from "components/Resources/CodeEditor";
+
 export const tsxContent = `import styles from './styles/TextGradient.module.css'
 
 const TextGradient = () => {
@@ -6,7 +8,7 @@ const TextGradient = () => {
     )
 }
 
-export default TextGradient`
+export default TextGradient`;
 
 export const cssContent = `.gradient {
     background: linear-gradient(94.71deg, #DEF59A -7.45%, #38C1C1 94.7%);
@@ -16,4 +18,17 @@ export const cssContent = `.gradient {
     text-fill-color: transparent;
     font-size: 30px;
     font-weight: 500;
-}`
+}`;
+
+export const content: Content[] = [
+  {
+    code: tsxContent,
+    language: "tsx",
+    tabName: "TextGradient.tsx",
+  },
+  {
+    code: cssContent,
+    language: "css",
+    tabName: "TextGradient.module.css",
+  },
+];

@@ -1,4 +1,6 @@
-export const tsxContent = `import { useEffect, useState } from 'react';
+import { Content } from "components/Resources/CodeEditor";
+
+const tsxContent = `import { useEffect, useState } from 'react';
 import styles from './styles/Scrollbar.module.css';
 
 const Scrollbar = () => {
@@ -37,9 +39,9 @@ const Scrollbar = () => {
     )
 }
 
-export default Scrollbar`
+export default Scrollbar`;
 
-export const cssContent = `.scrollbarContainer {
+const cssContent = `.scrollbarContainer {
     position: fixed;
     pointer-events: none;
     top: 0;
@@ -104,4 +106,17 @@ export const cssContent = `.scrollbarContainer {
     .scrollbarContainer {
         display: none;
     }
-}`
+}`;
+
+export const content: Content[] = [
+  {
+    code: tsxContent,
+    language: "tsx",
+    tabName: "Scrollbar.tsx",
+  },
+  {
+    code: cssContent,
+    language: "css",
+    tabName: "Scrollbar.module.css",
+  },
+];
